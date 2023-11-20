@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% load i18n %}
+
+{% block nav_download %}active{% endblock %}
+
+{% block content %}
+  <h1>{% block title %}{% trans "Download Page" %}{% endblock %}</h1>
+
+  <p>{% blocktrans trimmed %}Welcome to the Download Page.{% endblocktrans %}</p>
+{% endblock %}

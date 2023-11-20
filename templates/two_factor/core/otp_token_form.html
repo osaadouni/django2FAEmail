@@ -1,0 +1,27 @@
+{% load i18n %}
+{% load two_factor_tags %}
+
+{{ wizard.management_form }}
+
+<div class="card">
+    <div class="card-header">Enter your OTP token: {{ device|as_verbose_action }}</div>
+    <div class="card-body">
+
+        <div class="mb-3 row">
+            <label for="{{ wizard.form.otp_token.id_for_label }}" class="col-sm-2 col-form-label">
+                {{ wizard.form.otp_token.label }}
+            </label>
+            <div class="col-sm-10">
+              <input type="text"
+                     class="form-control"
+                     id="{{ wizard.form.otp_token.id_for_label }}"
+                     name="{{ wizard.form.otp_token.html_name }}"
+                     value="">
+            </div>
+        </div>
+
+        <div class="float-right">
+            <button type="submit" class="btn btn-primary">{% trans "Confirm" %}</button>
+        </div>
+    </div>
+</div>

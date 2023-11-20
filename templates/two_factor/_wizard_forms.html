@@ -1,0 +1,10 @@
+management_form: <br>
+{{ wizard.management_form }}
+
+{{ wizard.form.otp_token.html_name }}
+
+<table class="mb-3">
+    {% comment %}{{ wizard.management_form }}{% endcomment %}
+    {{ wizard.form.as_table }}
+</table>
+
